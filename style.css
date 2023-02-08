@@ -1,0 +1,109 @@
+body{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:repeat(10,75px);
+    background-image: url(./mole_bg.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
+body > *{
+    grid-column:1/span 12;
+}
+.title{
+    grid-column:3/span 8;
+    grid-row:1/2;
+    justify-self: center;
+    font-size:25px;
+    padding:5px;
+    background-color: rgb(255, 242, 0);
+    border: 1mm ridge rgb(255, 3, 3);
+    border-radius: 5px;
+}
+.user-data{
+    color:white;
+    grid-row:2/3;
+    display:flex;
+    justify-content: space-around;
+    font-size: 10px;
+    text-align: start;
+}
+.user-data > *{
+    border: 1mm ridge rgb(255, 0, 238);
+    width:25%;
+    height:55%;
+    text-align: center;
+    background-color: rgb(9, 4, 78);
+    padding:10px;
+    text-transform: uppercase;
+}
+
+
+.grid{
+    
+    grid-column:2 /span 10;
+    grid-row:3/ span 3;
+    width:1fr;
+    height: 1fr;
+    justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.square{
+    width:25%;
+    height: 32%;
+    margin:1%;
+    border: .5mm ridge rgba(255, 255, 255, 0.2); 
+    background-image:linear-gradient(to bottom,rgba(114, 116, 162,0.1),rgba(180, 156, 156,0.1)); 
+}
+
+.mole{
+background-image: url(./mole_bg1.png);
+background-color: rgba(180, 156, 156,0.5);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: top center;
+}
+
+.controls{
+    display: flex;
+    grid-area:6/3/7/11;    
+    justify-content: space-between;
+align-items: center;
+}
+.controls>*{
+    width:40%;
+    height:50%;
+    border: 1mm ridge rgb(255, 0, 238);
+    background-color: rgb(9, 4, 78);
+    color:white;
+    text-transform: uppercase;
+
+}
+@media (min-width:400px){
+    .controls{
+        grid-area:6/3/7/11;   
+        align-items: flex-end;
+    }
+}
+@media (min-width:900px){
+
+        .grid{
+            grid-row:3/ span 3;
+            grid-column:5 /span 4;
+        }
+        .square{
+            width:23%;
+            height:25%;
+        }
+        .controls{
+            grid-area:6/3/7/11;   
+            align-items: center;
+        }
+        .controls>*{
+            width:30%;
+            height:50%;
+        }
+}
