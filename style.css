@@ -98,6 +98,13 @@ align-items: center;
             width:23%;
             height:25%;
         }
+        .user-data >*{
+            font-size:15px;
+            height:80%;
+            width:20%;
+            padding-top:0px;
+            text-align: center;
+        }
         .controls{
             grid-area:6/3/7/11;   
             align-items: center;
